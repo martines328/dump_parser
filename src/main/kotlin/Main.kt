@@ -17,7 +17,6 @@ fun main(args: Array<String>) {
 
 }
 
-
 fun fileWorker(listOfAllDumpedFilePath: MutableList<Path>) {
 
     listOfAllDumpedFilePath.iterator().forEach {
@@ -36,6 +35,7 @@ fun fileWorker(listOfAllDumpedFilePath: MutableList<Path>) {
     }
 
 }
+
 
 fun jsonEditor(jsondata: String, htmlFilePath: String): Int { //костыль долбаный нужно переделать проверку сообщения и имени
 
@@ -76,9 +76,6 @@ fun jsonEditor(jsondata: String, htmlFilePath: String): Int { //костыль �
                 fileWriter.use {
                     it.write(replaceMessageData.replaceAll("left", data.text, to))
                 }
-                /* val fileWriter = FileWriter(htmlFilePath, true)
-                 fileWriter.use { it.write(replaceMessageData.replaceAll("left", data.text, )) }
-     */
             }
         }
     }
